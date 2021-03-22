@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .start{
+
+            display: flex;
+            justify-content: center;
+            background-color: rgba(196, 196, 196, 0.315);
+            align-items: flex-start;
+        }
+        .header a{
+            font-size: 18px;
+            margin: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .header-img{
+            display: flex;
+            justify-content: center;
+        }
+        .title{
+            background-image: url(asset\ 49.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            width: 100%;
+            height: 800px;
+            /* d-f默認橫的 */
+            display: flex;
+            flex-direction:column ;
+            justify-content: space-between;
+        }
+        .title0{
+            display: flex;
+            flex-direction: column;
+            padding: 0px 0px 0px 12%;
+        }
+        .title-text  h1{
+            font-size: 100px;
+        }
+        .title-text p{
+            font-size: 20px;
+        }
+        .title-pchange{
+            margin: 80px 0px 100px;
+        }
+        
+        .item1 p{
+            font-size: 18px;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+        }
+        .item1{
+            margin: 50px 100px;
+        }
+        .ziding1{
+            display: flex;
+            align-items: flex-end;
+        }
+        
+        .content1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 80px 12% 80px 12%;
+        }
+        .content1 h2{
+            width: 35%;
+            border-right: 2px solid #aaa;
+            
+        }
+        .content1-text{
+            width: 75%;
+            column-count: 2;
+            /* 要幾個欄位 */
+            column-gap: 70px;
+            /* 欄位和欄位之間距離 */
+            padding-left: 7%;
+        }
+        .content1-text
+        p:first-child::first-letter{
+             /* 上面這行選取器用途是：選取第一個字 */
+            color: rgb(219, 196, 166);
+            font-size: 60px;
+            float: left;
+        }
+        .content1-text{
+            font-size: 20px;
+        }
+        .content2{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            padding: 60px 5% 60px 10%;
+            background-color: rgb(219, 196, 166);
+        }
+        .content2.button h5{
+            padding: 25px;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .content2-text{
+            color: white;
+        }
+        .content2-text p{
+            font-size: 20px;
+        }
+        .content3{
+            margin:60px 0 50px 0 ;
+
+        }
+        .content3 h4{
+            color: rgb(219, 196, 166);
+        }
+        .content3-item1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 0px 10px;
+            /* border: 5px solid blueviolet; */
+        }
+        .content3-item1 h2{margin: 20px;}
+        .content3-item1 p{font-size: 20px;}
+        .content3-item2{
+            padding: 0px 10% 0% 10%;
+            display: flex;
+            font-display:row ;
+            justify-content: center;
+            /* border: 10px solid blue; */
+        }
+        .contenrt3-item2-left{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            /* border: 5px solid teal; */
+        }
+        .contenrt3-item2-left-1{
+            /* border: 5px solid rgb(71, 255, 95); */
+            margin: 20px;
+            display: flex;
+            /* justify-content: flex-end; */
+            flex-direction: row-reverse;
+        }
+        .contenrt3-item2-left-text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        /* .contenrt3-item2-left>p{font-size: 20px} */
+        .contenrt3-item2-center{
+            /* border: 5px solid rgb(255, 71, 71); */
+            margin: 50px;
+        }
+        .contenrt3-item2-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 5px solid teal; */
+        }
+        .contenrt3-item2-right-1{
+            /* border: 5px solid rgb(71, 255, 95); */
+            margin: 20px;
+            display: flex;
+            /* justify-content: flex-end; */
+            flex-direction: row;
+        }
+        .contenrt3-item2-right-1 p{
+            font-size: 15px;
+        }
+        .contenrt3-item2-left-1 img{
+            margin: 0px 0px 0px 10px;
+        }
+        .contenrt3-item2-right-1 img{
+            margin: 0px 10px 0px 0px;
+        }
+        .contenrt3-item2-left-1 p{
+            font-size: 15px;
+        }
+
+        .content4{
+            display: inline-block;
+            background-image: url(asset\ 50.jpeg);
+            background-repeat: no-repeat;
+            
+            padding: 150px 10% 150px 10%;
+            height: autox;
+            /* d-f默認橫的 */
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+            background-size:cover;
+
+        }
+        .content4-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content5{
+            padding: 80px 15% 80px 15%;
+            display: flex;
+            justify-content: center;
+            /* border: 10px solid brown; */
+            align-items: center;
+        }
+        .content5-left{
+            display: flex;
+            flex-direction: column;
+            /* border: 5px solid darkblue; */
+            padding: 0px 50px 0px 0px;
+        }
+        .content5-left-header{
+            margin: 10px 0px;
+        }
+        .content5-left p{
+            font-size: 20px;
+            margin: 10px 0px;
+        }
+        .content5-left-ul{
+            margin: 10px 0px;
+        }
+        .content5-left-ul li{
+            margin: 5px;
+        }
+        .content5-right{
+            font-size: 20px;
+            /* border: 5px solid rgb(44, 139, 0); */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .content5-right-item{
+            margin: 15px 0px;
+        }
+        .content6{
+            width: 100%;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+        .content6-item2{
+            display: flex;
+            margin:50px ;
+        }
+        .content6-item2 p{
+            font-size: 15px;
+            margin: 10px 15px;
+        }
+        .content7{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content7-header{
+            padding: 0px 0px 100px ;
+        }
+        .content8{
+            display: flex;
+            width: 100%;
+            height: 600px;
+            justify-content: center;
+        }
+        .content8-left{
+            width: 48%;
+            background-color: rgb(112, 112, 112);
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-evenly; */
+            justify-content: space-evenly;
+            padding-left: 150px;
+        }
+        .content8-left-1{
+            display: flex;
+            color: ghostwhite;
+        }
+        .content8-left-2{
+            display: flex;
+            color: ghostwhite;
+        }
+        .content8-left-1-left{
+            margin-right: 50px;
+        }
+        .content8-left-1-item{
+            display: flex;
+            margin: 20px 0px;
+        }
+        .content8-left p{
+            font-size: 20px;
+        }
+        .content8-left-1-right img{
+            margin-right: 10px;
+        }
+        .content8-left-2-right img{
+            margin-right: 10px;
+        }
+
+
+        .content8-right{
+            width: 52%;
+            background-color: rgb(236, 236, 236);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content8-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-left: 100px;
+        }
+        .content8-right p{
+            font-size: 10px;
+        }
+        .content8-right-item1{
+            display: flex;
+        }
+        .content8-right-item2{
+            display: flex;
+        }
+        .content8-right-item1-1{
+            width: 250px;
+        }
+        .content8-right-item2-1{
+            width: 250px;
+        }
+        .content9{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            background-color:rgb(219, 196, 166) ;
+        }
+        .content9 h2{
+            color: white;
+            margin-right: 150px;
+        }
+        .content9-right{
+            display: flex;
+            align-items: center;
+        }
+        .content9-right p{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .content10{
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .content10 p{
+            margin: 10px 0px;
+            font-size: 15px;
+        }
+        .content10-item{
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .content10-item img{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="title">
+        <div class="start">
+            <div class="header">
+                    <div class="header-img"  style="margin:25px;">
+                    <img src="asset 0.png" alt="" width="60%">
+                    </div>
+                    <nav>
+                        <a href="#">HOME</a>
+                        <a href="#">PAGES</a>
+                        <a href="#">FEATURES</a>
+                        <a href="#">NEWS</a>
+                        <a href="#">SHOP</a>
+                    </nav>
+            </div>
+        </div>
+            <div class="title0">
+                <div class="title-text">
+                    <h1>&nbsp;The Power</h1>
+                    <p>&emsp; OF IMAGINATION MAKES US INFINITE</p>
+                </div>
+                <div class="title-pchange">
+                    &emsp; ← &emsp;03/03 &emsp;→
+                </div>
+            </div>
+        
+            <div class="item">
+            <div class="item1">
+                <div class="ziding1">
+                    <img src="http://fakeimg.pl/40x40/ " alt="">
+                    <h6>DEVELOPMENT</h6>    
+                </div>
+                <p>We work alongside national and <br> international organizations.</p>
+            </div>
+            <div class="item1">
+                <div class="ziding1">
+                    <img src="http://fakeimg.pl/40x40/ " alt="">
+                    <h6>INTEGRATION</h6>    
+                </div>
+                <p>Committed to conducting its <br> business according to the highest...</p>
+            </div>
+            <div class="item1">
+                <div class="ziding1">
+                    <img src="http://fakeimg.pl/40x40/ " alt="">
+                    <h6>RESPONSIBILITY</h6>    
+                </div>
+                <p>Responsible customer relations <br> through clear communication...</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="content1">
+        <h2>
+            Looking for a <br> First-Class <br> Business Plan
+        </h2>
+        <div class="content1-text">
+        <p>
+            We’re a financial and consulting business
+            company of professional thinkers, strategists,
+            digital innovators, designers and problem solvers
+            (everyone gets a mention). Our sense of curiosity brings 
+        
+            thinkers, strategists, digital innovators, designers 
+            and problem solvers (everyone gets a mention). Our sense
+             of curiosity brings brands to life, gets them talking, 
+             and makes sure they’re heard above.
+        </p>
+        </div>
+    </div>
+    <div class="content2">
+        <div class="content2-text">
+            <h2>Unleash Your Team’s Productive Power</h2>
+            <p>The truly scarce resources now are the time,
+                the talent, and the energy of the people.
+            </p>
+        </div>
+        <div class="content2 button">
+            <h5>
+                GET IN TOUCH
+            </h5>
+        </div>
+    </div>
+    <div class="content3">
+        <div class="content3-item1">
+            <h2>
+                Why Traders Choose Us
+            </h2>
+            <p style="text-align-last: center;">
+                With a community of over 400 million users (and a majo
+                rity age group being 18 to 29), wouldn’t you want <br>
+                to make sure you’re monitoring what people are posting 
+                on social networks? Especially if the demographic <br>
+                of your audience falls in that age range.
+            </p>
+        </div>
+        <div class="content3-item2">
+            <div class="contenrt3-item2-left">
+                <div class="contenrt3-item2-left-1">
+                    <div class="contenrt3-item2-left-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-left-text">
+                        <div class="contenrt3-item2-left-text-h">
+                            <h4>VISIT</h4>
+                        </div>
+                        <div class="contenrt3-item2-left-text-p">
+                            <p style="text-align-last: right;">Our values and ideals are our decision
+                                <br> making guide.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenrt3-item2-left-1">
+                    <div class="contenrt3-item2-left-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-left-text">
+                        <div class="contenrt3-item2-left-text-h">
+                            <h4>SAVE</h4>
+                        </div>
+                        <div class="contenrt3-item2-left-text-p">
+                            <p style="text-align-last: right;">We only release our products when
+                                <br> we feel they meet our standards.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenrt3-item2-left-1">
+                    <div class="contenrt3-item2-left-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-left-text">
+                        <div class="contenrt3-item2-left-text-h">
+                            <h4>EXPLORE</h4>
+                        </div>
+                        <div class="contenrt3-item2-left-text-p">
+                            <p style="text-align-last: right;">We rely on the same platform and
+                                <br>tools our customers pay us for
+                           </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="contenrt3-item2-center">
+                <img src="asset 1.png" alt="">
+            </div>
+            <div class="contenrt3-item2-right">
+                <div class="contenrt3-item2-right-1">
+                    <div class="contenrt3-item2-right-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-right-text">
+                        <div class="contenrt3-item2-right-text-h">
+                            <h4>ORGANIZE</h4>
+                        </div>
+                        <div class="contenrt3-item2-right-text-p">
+                            <p style="text-align-last: left;">Beautiful products to help people with
+                                <br> creative ideas succeed
+                           </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenrt3-item2-right-1">
+                    <div class="contenrt3-item2-right-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-right-text">
+                        <div class="contenrt3-item2-right-text-h">
+                            <h4>COMMUNICATE</h4>
+                        </div>
+                        <div class="contenrt3-item2-right-text-p">
+                            <p style="text-align-last: left;">Creative, stylish, and easy-to-manage
+                                <br>online presence.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenrt3-item2-right-1">
+                    <div class="contenrt3-item2-right-img">
+                        <img src="http://fakeimg.pl/80x80/" alt="">
+                    </div>
+                    <div class="contenrt3-item2-right-text">
+                        <div class="contenrt3-item2-right-text-h">
+                            <h4>SHARE</h4>
+                        </div>
+                        <div class="contenrt3-item2-right-text-p">
+                            <p style="text-align-last: left;">Share stories and create an impactful
+                                <br>online presence.
+                           </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="content4">
+        <div class="content4-1">
+            <img src="http://fakeimg.pl/80x80/" alt="" >
+            <h1 style="text-align-last: center;">2007</h1>
+            <p style="text-align-last: center;">COMPANY<br> ESTABLISHED</p>
+        </div>
+        <div class="content4-1">
+            <img src="http://fakeimg.pl/80x80/" alt="" >
+            <h1 style="text-align-last: center;">426</h1>
+            <p style="text-align-last: center;">PROJECTS<br> DONE</p>
+        </div>  
+        <div class="content4-1">
+            <img src="http://fakeimg.pl/80x80/" alt="" >
+            <h1 style="text-align-last: center;">45+</h1>
+            <p style="text-align-last: center;">BUSINESS<br> PARTHNERS</p>
+        </div>
+        <div class="content4-1">
+            <img src="http://fakeimg.pl/80x80/" alt="" >
+            <h1 style="text-align-last: center;">1510</h1>
+            <p style="text-align-last: center;">HAPPY <br> CLIENTS</p>
+        </div>
+            
+    </div>
+    <div class="content5">
+        <div class="content5-left">
+            <div class="content5-left-header">
+                <h2>What We Are Good At</h2>
+            </div>
+            <div class="content5-left-p">
+                <p>
+                    With a community of over 400 million users (and a majority age group <br>
+                    being 18 to 29), wouldn’t you want to make sure you’re monitoring what <br>
+                    people are posting on social networks?
+                </p>
+            </div>
+            <div class="content5-left-ul">
+                <ul>
+                    <li>Article and News research</li>
+                    <li>Company and Industry Research</li>
+                    <li>Industry Research and Market Research</li>
+                    <li>Market Analysis Report</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content5-right">
+            <div class="content5-right-item">
+                <p>FINANCIAL SERVICES</p>
+                <img src="http://fakeimg.pl/400x5/" alt="">
+            </div>
+            <div class="content5-right-item">
+                <p>BUSINESS SERVICES</p>
+                <img src="http://fakeimg.pl/400x5/" alt="">
+            </div>
+            <div class="content5-right-item">
+                <p>CONSUMER PRODUCTS</p>
+                <img src="http://fakeimg.pl/400x5/" alt="">
+            </div>
+            <div class="content5-right-item">
+                <p>ENERGY AND ENVIRONMENT</p>
+                <img src="http://fakeimg.pl/400x5/" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="content6">
+        <div class="content6-item1">
+            <h2>
+                Our Latest Projects
+            </h2>
+        </div>
+        <div class="content6-item2">
+            <p>ALL</p>
+            <p>ADVANCED ANALYTICS</p>
+            <p>CORPORATE FINANCE</p>
+            <p>DIGITAL</p>
+            <p>ORGANIZATION</p>
+            <p>PRIVATE EQUITY</p>
+            <p>STRATEGY</p>
+            <p>STRATEGY & MARKETING</p>
+        </div>
+    </div>
+    <div class="content7">
+        <div class="content7-header">
+            <h2>Clients Testimonials</h2>
+        </div>
+        <div class="content7-item">
+            ···
+        </div>
+    </div>
+    <div class="content8">
+        <div class="content8-left">
+            <div class="content8-left-1">
+                <div class="content8-left-1-left">
+                   <img src="asset 6.jpeg" alt=""> 
+                </div>
+                <div class="content8-left-1-right">
+                    <p >CEO, OWNER</p>
+                    <h3>Sarah Johnson</h3>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>+ 800 123 45 70</p>
+                    </div>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>info@imperion.com</p>
+                    </div>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>sarah.johnson</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content8-left-2">
+                <div class="content8-left-1-left">
+                   <img src="asset 7.jpeg" alt=""> 
+                </div>
+                <div class="content8-left-2-right">
+                    <p >MARKETING DEPARTMEN</p>
+                    <h3>Irene Doe</h3>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>+ 800 123 45 85</p>
+                    </div>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>info@imperion.com</p>
+                    </div>
+                    <div class="content8-left-1-item">
+                        <img src="http://fakeimg.pl/20x20/" alt="">
+                        <p>irene.doe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content8-right">
+            <h2>Our Offices</h2>
+            <div class="content8-right-item1">
+                <div class="content8-right-item1-1">
+                    <h6>HEAD OFFICE#1</h6><p>4096 N Highland St, Arlington
+                        <br> VA 32101, USA
+                        <br> imperion@company.com
+                        <br> 800 1234 56 78</p>
+                </div>
+                <div class="content8-right-item1-2">
+                    <h6>HEAD OFFICE#2</h6><p>4096 N Highland St, Arlington
+                       <br> VA 32101, USA
+                       <br> imperion@company.com
+                       <br>800 1234 56 78</p>
+                </div>
+            </div>
+            <div class="content8-right-item2">
+                <div class="content8-right-item2-1">
+                    <h6>BUSINESS HOURS</h6><p>Mon-Thu: 9:30 - 21:00
+                      <br>  Fri: 6:00 - 21:00
+                       <br> Sat: 10:00 - 15:00
+                        </p>
+                </div>
+                <div class="content8-right-item2-2">
+                    <h6>BUSINESS HOURS</h6><p>Mon-Thu: 9:30 - 21:00
+                       <br> Fri: 6:00 - 21:00
+                       <br> Sat: 10:00 - 15:00</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="content9">
+        <h2>Stay Always In <br> Touch</h2>
+        <div class="content9-right">
+            <img src="http://fakeimg.pl/600x40/" alt="">
+            <p> SUBSCRIBE</p>
+        </div>
+    </div>
+    <div class="content10">
+        <p>Address:4096 N Highland St, Arlington VA 32101, USA</p>
+        <p>Email:imperion@company.com</p>
+        <p>Phone:800 1234 56 78</p>
+        <div class="content10-item">
+            <img src="http://fakeimg.pl/40x40/" alt="">
+            <img src="http://fakeimg.pl/40x40/" alt="">
+            <img src="http://fakeimg.pl/40x40/" alt="">
+            <img src="http://fakeimg.pl/40x40/" alt="">
+        </div>
+        <p>© 2021 Imperion. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
